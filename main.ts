@@ -2,8 +2,8 @@
  *
  * Created by: Francisco Rocco Allegri
  * Created on: Oct 2024
- * This program compares 2 generated numbers
-*/
+ * This program compares 2 generated numbers.
+ */
 
 let randomNumber1: number = randint(0, 99)
 let randomNumber2: number = randint(0, 99)
@@ -13,22 +13,28 @@ basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
+    basic.showString("#1: ")
     basic.showNumber(randomNumber1)
     basic.showIcon(IconNames.Happy)
-});
+})
 
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
+    basic.showString("#2: ")
     basic.showNumber(randomNumber2)
     basic.showIcon(IconNames.Happy)
-});
+})
 
 input.onGesture(Gesture.Shake, function () {
-    basic.clearScreen()
+    basic.clearScreen();
+
     if (randomNumber1 > randomNumber2) {
-        basic.showString("#1 > #2")
+        basic.showString(randomNumber1 + " > " + randomNumber2)
     } else if (randomNumber1 < randomNumber2) {
-        basic.showString("#1 < #2")
+        basic.showString(randomNumber1 + " < " + randomNumber2)
+    } else {
+        basic.showString(randomNumber1 + " = " + randomNumber2)
     }
+
     basic.showIcon(IconNames.Sad)
 })
