@@ -1,8 +1,20 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Francisco Rocco Allegri
+ * Created on: Oct 2024
+ * This program compares 2 generated numbers
 */
 
-basic.showString('Hello, World!')
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+
+
+input.buttonIsPressed(Button.A)
+
+
+
+
+
+
+
